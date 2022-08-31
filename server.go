@@ -30,6 +30,6 @@ func main(){
 	router.POST("/PostArticle/", routes.PostArticle)
 	router.PUT("/UpdateArticle/:id", middleware.IsAuth(), routes.UpdateArticle)
 	router.DELETE("/DeleteArticle/:id", middleware.IsAuth(), routes.DeleteArticle)
-
+	
 	router.Run(":8080")
 }
